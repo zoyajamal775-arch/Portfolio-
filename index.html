@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hafiza Zoya Jamal — Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <div class="brand">
+        <div class="logo">HZ</div>
+        <div>
+          <h1>Hafiza Zoya Jamal</h1>
+          <p class="muted">Frontend Developer • Python Expert • CS Student</p>
+        </div>
+      </div>
+
+      <div class="top-controls">
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <a href="resume.pdf" target="_blank" class="btn">View Resume</a>
+
+        <button id="themeToggle" class="btn">🌗</button>
+      </div>
+    </nav>
+
+    
+    <header class="header">
+     
+<div class="profile">
+  <img src="profile.jpg" alt="Your profile photo">
+</div>
+
+
+
+      <div class="intro">
+        <div class="banner">✨ Hi, I’m <strong>Hafiza Zoya Jamal</strong> — Frontend Developer & Python Expert</div>
+        <h2 style="margin-top:12px">I design responsive web interfaces and build small Python tools.</h2>
+        <p class="muted">Computer Science student — Women University Multan, 5th semester (CGPA 3.78). Moving from basic → expert through projects.</p>
+
+        <div style="margin-top:14px">
+          <a href="projects.html" class="btn">See Projects</a>
+          <a href="contact.html" class="btn ghost" style="margin-left:10px">Contact Me</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="grid" style="margin-top:22px">
+      <main>
+        <div class="card">
+          <h3>About me (quick)</h3>
+          <p class="muted">Expert in frontend & practical Python. I like building calculators, password generators, small ML experiments & UI demos.</p>
+          <div style="margin-top:12px" class="skills">
+            <span class="skill">HTML & CSS</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">Python</span>
+            <span class="skill">Machine Learning (basics)</span>
+            <span class="skill">C++</span>
+            <span class="skill">SQL</span>
+            <span class="skill">MS Office</span>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:14px">
+          <h3>Highlighted Projects</h3>
+          <div class="projects">
+            <div class="project"><h4>Calculator</h4><p class="muted">Scientific + GUI calculator (Tkinter) with history & export.</p></div>
+            <div class="project"><h4>Customized Shirts</h4><p class="muted">web page of customized shirts with HTML and CSS</p></div>
+            <div class="project"><h4>Password Generator</h4><p class="muted">Strong password generator with python</p></div>
+          </div>
+          <div style="margin-top:12px"><a href="projects.html" class="btn">View all projects</a></div>
+        </div>
+      </main>
+
+      <aside class="card">
+        <div class="center">
+          <h3 style="margin:6px 0 2px 0">Contact</h3>
+          <p class="muted">Email: <a href="mailto:zoyajamal775@gmail.com">zoyajamal775@gmail.com</a></p>
+          <div style="margin-top:10px">
+            <a class="btn" href="contact.html">Hire / Message</a>
+          </div>
+        </div>
+
+        <div style="margin-top:16px">
+          <h4>Details</h4>
+          <p class="muted" style="margin:6px 0">Women University Multan — 5th semester</p>
+          <p class="muted">CGPA: <strong>3.78</strong></p>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      © <span id="year"></span> Hafiza Zoya Jamal — <a href="mailto:zoyajamal775@gmail.com">zoyajamal775@gmail.com</a>
+    </footer>
+  </div>
+
+<script>
+  
+  (function(){
+    const root = document.documentElement;
+    const saved = localStorage.getItem('portfolio-theme') || 'light';
+    root.setAttribute('data-theme', saved);
+    document.getElementById('themeToggle').addEventListener('click', ()=>{
+      const current = root.getAttribute('data-theme');
+      const next = current === 'light' ? 'dark' : 'light';
+      root.setAttribute('data-theme', next);
+      localStorage.setItem('portfolio-theme', next);
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  })();
+
+  
+  function openResume(){
+    
+    window.open('resume.pdf.docx', '_blank');
+  }
+</script>
+</body>
+</html>

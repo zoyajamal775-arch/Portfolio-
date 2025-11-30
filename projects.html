@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projects — Hafiza Zoya Jamal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <div class="brand">
+        <div class="logo">HZ</div>
+        <div>
+          <h1>Hafiza Zoya Jamal</h1>
+          <p class="muted">Frontend Developer • Projects</p>
+        </div>
+      </div>
+
+      <div class="top-controls">
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <button id="themeToggle" class="btn">🌗</button>
+      </div>
+    </nav>
+
+    <section style="margin-top:18px">
+      <h2>My Projects</h2>
+      <div class="projects">
+        <div class="project"><h4>🧮 Calculator</h4><p class="muted">Scientific + GUI calculator with history & export (Python/Tkinter).</p></div>
+        <div class="project"><h4>👕 Customized Shirts</h4><p class="muted">UI for customizing shirts and mock payment form</p></div>
+        <div class="project"><h4>💳 Payment Form</h4><p class="muted">Styled payment form with validation (demo).</p></div>
+        <div class="project"><h4>🔐 Password Generator</h4><p class="muted">Password generator with python tools</p></div>
+        <div class="project"><h4>☕ Coffee Bar</h4><p class="muted">coffe bar using python tools</p></div>
+        <div class="project"><h4>📝 Task Generator</h4><p class="muted">To-do app with add/edit/delete and localStorage.</p></div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Hafiza Zoya Jamal
+    </footer>
+  </div>
+
+<script>
+  (function(){ const root=document.documentElement; const saved=localStorage.getItem('portfolio-theme')||'light'; root.setAttribute('data-theme', saved);
+    document.getElementById('themeToggle').addEventListener('click', ()=>{ const current=root.getAttribute('data-theme'); const next=current==='light'?'dark':'light'; root.setAttribute('data-theme', next); localStorage.setItem('portfolio-theme', next); });
+    document.getElementById('year').textContent=new Date().getFullYear();
+  })();
+</script>
+</body>
+</html>
